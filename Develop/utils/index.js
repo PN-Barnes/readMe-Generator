@@ -27,7 +27,7 @@ const questions = [{
 {
     type: 'list',
     message: 'Please select a license used for this project application',
-    choices:['MIT', 'Unlicense', 'Mozilla', 'Apache', 'BSD', 'Boost', 'none'],
+    choices:['MIT', 'Unlicense', 'Mozilla', 'Apache', 'BSD-2','BSD-3', 'Boost', 'none'],
     name: 'license'
 },
 {

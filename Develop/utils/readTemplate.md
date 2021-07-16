@@ -1,9 +1,9 @@
 
-  # test title
+  # new tes
 
   ## Description 
   
-  no thanks you write yourself
+  no
 
   ## Table of Contents
   
@@ -16,15 +16,15 @@
   
   ## Installation 
   
-  no install instructions
+  no
 
   ## Usage
 
-  no usages is allowed for this because im stingy
+  no
   
   ## License 
   
-  MIT
+  [License: MIT](https://opensource.org/licenses/MIT)
 
   ## Contributing
 
@@ -32,10 +32,10 @@
   
   ## Tests
 
-  no tests
+  no
   
   ## Questions
 
-  PN-Barnes
-  paulieb99@gmail.com
+  no
+  no
   
