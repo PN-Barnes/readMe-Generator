@@ -27,7 +27,7 @@ const questions = [{
 {
     type: 'list',
     message: 'Please select a license used for this project application',
-    choices:['MIT', 'Unlicense', 'Mozilla', 'Apache', 'BSD'],
+    choices:['MIT', 'Unlicense', 'Mozilla', 'Apache', 'BSD', 'Boost', 'none'],
     name: 'license'
 },
 {
@@ -55,15 +55,16 @@ inquirer
     .prompt(questions)
     .then((Response)=>{
         console.log(Response)
+        writeToFile('readTemplate.md', generateMarkdown.generateMarkdown(Response))
     })
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) =>
-//       err ? console.error(err) : console.log('Success!')
-//     );
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+      err ? console.error(err) : console.log('Success!')
+    );
 
-// }
+}
 
 // TODO: Create a function to initialize app
 function init() {}
