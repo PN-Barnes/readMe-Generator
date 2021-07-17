@@ -1,9 +1,11 @@
 
-  # new tes
+  # 
+  
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description 
   
-  no
+  
 
   ## Table of Contents
   
@@ -16,26 +18,26 @@
   
   ## Installation 
   
-  no
+  
 
   ## Usage
 
-  no
+  
   
   ## License 
   
-  [License: MIT](https://opensource.org/licenses/MIT)
+  This application is covered under the [License: MIT](https://opensource.org/licenses/MIT) license. Please click the link to be taken to what this license covers for the application.
 
   ## Contributing
 
-  no
+  
   
   ## Tests
 
-  no
+  
   
   ## Questions
 
-  no
-  no
+  
+  
   
