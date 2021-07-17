@@ -55,7 +55,7 @@ inquirer
     .prompt(questions)
     .then((Response)=>{
         console.log(Response)
-        writeToFile('readTemplate.md', generateMarkdown.generateMarkdown(Response))
+        writeToFile('README.md', generateMarkdown.generateMarkdown(Response))
     })
 
 // TODO: Create a function to write README file
@@ -65,9 +65,3 @@ function writeToFile(fileName, data) {
     );
 
 }
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-// init();

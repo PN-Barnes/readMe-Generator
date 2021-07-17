@@ -41,6 +41,7 @@ function renderLicenseBadge(license) {
       break;
 
     default:
+      license = ''
       break;
   }
   return license

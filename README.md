@@ -1,111 +1,64 @@
-# 09 Node.js Homework: Professional README Generator
+  # README-Generator
 
-## Your Task
+  ## Description 
+  
+  This Application is run using node.js within GitBash. This application runs inquirer prompt questions within the terminal asking the user a series of questions on what the Readme will include. Questions include the title of the document, the license, install instructions, and personal contact details to reach the user for any questions. The application then uses the fs.writeToFile method to create or write over the readme file without the user having to do it manually. 
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
+  ## Table of Contents
+  
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation 
+  
+  Download the code files from the repository found on github. Have Node.js installed before hand. Once completed, head into the directory through git bash and run node init -y to initialize node and generate the json file, once done, run node index.js within the utils folder to start the readme generator.
 
-You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+  ## Usage
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](./Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain. 
+  ### generateMarkdown.js
 
-The application will be invoked by using the following command:
+  The usage of this application will generate a professional readme file in a quick amount of time, this could also be refactored to write to other files such as generating index.html files. this file utilizes two files through file modularizations. generateMarkdown.js is the file that creates the switch cases to check what the license choice of the users and will return the badge at the top of the readme and a link to the license within the license section. 
+  
+  
+  ![generateMarkdown.js](./Develop/assets/images/generateMarkdown.png)
 
-```bash
-node index.js
-```
+  At the bottom of the generateMarkdown.js file is the function generateMarkdown which will take in all data and place it within the proper format for the readme file. This function returns a template literal with the proper syntax for a readme file with variables placed within their corresponding spot. 
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
+  ![generateMarkdown()](./Develop/assets/images/generateMarkdownFunction.png)
 
+  ### Index.js
 
-## User Story
+  This file is what initializes the generator and calls the files needed to run the application. At the top of the file, it calls on the npm package [inquirer](https://www.npmjs.com/package/inquirer) which can be found here, the fs to call on methods such as writing to other files within the directory, and then the generateMarkdonwn.js file which has the license and markdown functions. Once those are called, a questions array stores objects of questions with certain inputs to be able to iterate through during the terminal call. 
 
-```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
+  ![index.js](./Develop/assets/images/index.js.png)
 
-## Acceptance Criteria
+  ### Inquirer 
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+  The bottom half of the index.js in the inquirer call that allows for the prompt. This creates the inquirer prompt which iterates through questions array one by one and then logs all the inputs to the console. Once the response is logged, then the writeToFile function is called to write to a specified file with the certain data parameters.
 
-## Getting Started
+  ![inquirer](./Develop/assets/images/inquirer.png)
 
-Here are some guidelines to help you get started:
+  ## License 
+  
+  This application is covered under the  license. Please click the link to be taken to what this license covers for the application.
 
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
+  ## Contributing
 
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+  No guidelines for implementing contributions to this project.
+  
+  ## Tests
 
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
+  No tests run witin this application.
+  
+  ## Questions
+  
+  If there are any questions or want to leave feedback about the project, follow the links below to conatct me. 
 
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to walkthrough video.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+  [PN-Barnes](https://github.com/PN-Barnes)
+  
+  paulieb99@gmail.com
+  
