@@ -4,6 +4,8 @@
   
   This Application is run using node.js within GitBash. This application runs inquirer prompt questions within the terminal asking the user a series of questions on what the Readme will include. Questions include the title of the document, the license, install instructions, and personal contact details to reach the user for any questions. The application then uses the fs.writeToFile method to create or write over the readme file without the user having to do it manually. 
 
+  Here is a walkthrough Video running this application and showing the readme Generated file: [Walkthrough](https://youtu.be/EOkHzdRW_j4)
+
   ## Table of Contents
   
   * [Installation](#installation)
